@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DSA App</title>
+<meta name="description" content="TAE-II App Development: Introduction to Data Structures and Algorithms">
+<meta name="theme-color" content="#0E3B2E">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Logo symbol: a binary tree -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="logo" viewBox="0 0 100 100">
+<rect width="100" height="100" rx="22" fill="#0E3B2E"/>
+<g stroke="#CFE8DC" stroke-width="4" stroke-linecap="round"><path d="M50 26L29 52M50 26L71 52M29 52L18 76M29 52L40 76M71 52L82 76"/></g>
+<g fill="#F5B83D"><circle cx="50" cy="24" r="9"/></g>
+<g fill="#fff"><circle cx="29" cy="52" r="8"/><circle cx="71" cy="52" r="8"/><circle cx="18" cy="77" r="6.5"/><circle cx="40" cy="77" r="6.5"/><circle cx="82" cy="77" r="6.5"/></g>
+</symbol>
+</svg>
+
+<!-- Home screen: the DSA icon -->
+<main id="desk">
+  <p>Home screen</p>
+  <button class="icon" id="appIcon" aria-label="DSA app. Double-click to open">
+    <svg><use href="#logo"/></svg><span>DSA</span>
+  </button>
+  <p class="hint" id="hint">Double-click the DSA icon to open the website.<br>On a phone, double-tap it.</p>
+</main>
+
+<!-- Website opened by the icon -->
+<div id="site">
+  <div class="top">
+    <b><svg><use href="#logo"/></svg>DSA</b>
+    <button class="close" id="closeBtn">Back to home screen</button>
+  </div>
+
+  <section class="page">
+    <span class="tag">Page I</span>
+    <div class="cover">
+      <h1>TAE-II</h1>
+      <h2>App Development</h2>
+      <p>Student name</p>
+      <input id="name" placeholder="Type your name here" autocomplete="name" aria-label="Student name">
+    </div>
+  </section>
+
+  <section class="page p2">
+    <span class="tag">Page II</span>
+    <svg class="logo-big"><use href="#logo"/></svg>
+    <h2>Introduction to DSA</h2>
+    <p class="sub">Data Structures and Algorithms: ways to organise data and the steps to work with it.</p>
+    <label class="search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="q" type="search" placeholder="Search a topic, e.g. stack" aria-label="Search topics">
+    </label>
+
+    <div class="modes" role="group" aria-label="Choose format">
+      <button data-m="pdf" aria-pressed="false">PDF</button>
+      <button data-m="web" aria-pressed="true">Web page</button>
+      <button data-m="vid" aria-pressed="false">Video</button>
+    </div>
+    <div id="list"></div>
+  </section>
+  <p class="foot">TAE-II Application Development</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
